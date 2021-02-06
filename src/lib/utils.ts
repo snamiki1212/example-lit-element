@@ -1,0 +1,10 @@
+// REF: https://stackoverflow.com/a/52349453/8842333
+export function upperCamelCaseToKebabCase(value: string) {
+  return (
+    value
+      // first char to lower case
+      .replace(/^([A-Z])/, $1 => $1.toLowerCase())
+      // following upper chars get preceded with a dash
+      .replace(/([A-Z])/g, $1 => '-' + $1.toLowerCase())
+  );
+}
