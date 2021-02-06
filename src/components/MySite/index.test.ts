@@ -1,9 +1,8 @@
 import { html, fixture, expect } from '@open-wc/testing';
 
-import { MySite } from '../src/components/MySite.js';
-// import '../src/components/my-site.js';
+import { MySite } from './index.js';
 
-import { upperCamelCaseToKebabCase } from '../src/lib/utils';
+import { upperCamelCaseToKebabCase } from '../../lib/utils';
 
 const klass = MySite;
 const kebab = upperCamelCaseToKebabCase(klass.name);
