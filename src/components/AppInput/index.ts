@@ -1,16 +1,20 @@
 import { LitElement, html, css, property } from 'lit-element';
+// import ScssStyle from './style.scss';
 
 export class AppInput extends LitElement {
   @property({ type: Boolean }) isOn = true;
 
-  static styles = css`
-    h1 {
-      color: red;
-    }
-    .second {
-      color: blue;
-    }
-  `;
+  static styles = [
+    // ScssStyle,
+    css`
+      h1 {
+        color: red;
+      }
+      .second {
+        color: blue;
+      }
+    `,
+  ];
 
   clickButton() {
     this.isOn = !this.isOn;
@@ -26,7 +30,7 @@ export class AppInput extends LitElement {
         <button @click="${this.clickButton}">click me</button>
         ${this.isOn ? html`On` : html`OFF`}
       </div>
-      <div>this-is-4th</div>
+      <div class="fourth">this-is-4th</div>
     </div>`;
   }
 }
