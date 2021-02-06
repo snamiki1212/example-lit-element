@@ -1,8 +1,5 @@
 import { AppInput } from './components/AppInput';
 import { MySite } from './components/MySite/index.js';
-import { upperCamelCaseToKebabCase } from './lib/utils';
+import { defineCustomElement } from './lib/utils';
 
-[MySite, AppInput].map(klass => {
-  const kebab = upperCamelCaseToKebabCase(klass.name);
-  customElements.define(kebab, klass);
-});
+[MySite, AppInput].map(klass => defineCustomElement(klass));

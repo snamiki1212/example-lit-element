@@ -1,12 +1,8 @@
 import { html, fixture, expect } from '@open-wc/testing';
-
 import { MySite } from './index.js';
+import { defineCustomElement } from '../../lib/utils';
 
-import { upperCamelCaseToKebabCase } from '../../lib/utils';
-
-const klass = MySite;
-const kebab = upperCamelCaseToKebabCase(klass.name);
-customElements.define(kebab, klass);
+defineCustomElement(MySite);
 
 describe('MySite', () => {
   let element: MySite;
