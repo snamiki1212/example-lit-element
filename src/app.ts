@@ -1,4 +1,4 @@
-import { AppInput } from './components/app-input';
+import { AppInput } from './components/AppInput';
 import { MySite } from './components/MySite.js';
 import { upperCamelCaseToKebabCase } from './lib/utils';
 

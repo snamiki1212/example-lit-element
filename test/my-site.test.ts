@@ -1,7 +1,13 @@
 import { html, fixture, expect } from '@open-wc/testing';
 
 import { MySite } from '../src/components/MySite.js';
-import '../src/components/my-site.js';
+// import '../src/components/my-site.js';
+
+import { upperCamelCaseToKebabCase } from '../src/lib/utils';
+
+const klass = MySite;
+const kebab = upperCamelCaseToKebabCase(klass.name);
+customElements.define(kebab, klass);
 
 describe('MySite', () => {
   let element: MySite;
